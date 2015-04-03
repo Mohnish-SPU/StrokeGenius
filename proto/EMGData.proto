@@ -1,0 +1,6 @@
+package StrokeGeniusProto;
+
+message EMGData{
+	
+	repeated int32 sensorData = 1 [packed = true];
+}
