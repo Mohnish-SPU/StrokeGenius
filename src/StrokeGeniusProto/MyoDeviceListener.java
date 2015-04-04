@@ -8,6 +8,547 @@ public final class MyoDeviceListener {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  public interface Vector3OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+    
+    // required float x = 1;
+    boolean hasX();
+    float getX();
+    
+    // required float y = 2;
+    boolean hasY();
+    float getY();
+    
+    // required float z = 3;
+    boolean hasZ();
+    float getZ();
+    
+    // required float magnitude = 4;
+    boolean hasMagnitude();
+    float getMagnitude();
+  }
+  public static final class Vector3 extends
+      com.google.protobuf.GeneratedMessage
+      implements Vector3OrBuilder {
+    // Use Vector3.newBuilder() to construct.
+    private Vector3(Builder builder) {
+      super(builder);
+    }
+    private Vector3(boolean noInit) {}
+    
+    private static final Vector3 defaultInstance;
+    public static Vector3 getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public Vector3 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return StrokeGeniusProto.MyoDeviceListener.internal_static_StrokeGeniusProto_Vector3_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return StrokeGeniusProto.MyoDeviceListener.internal_static_StrokeGeniusProto_Vector3_fieldAccessorTable;
+    }
+    
+    private int bitField0_;
+    // required float x = 1;
+    public static final int X_FIELD_NUMBER = 1;
+    private float x_;
+    public boolean hasX() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    public float getX() {
+      return x_;
+    }
+    
+    // required float y = 2;
+    public static final int Y_FIELD_NUMBER = 2;
+    private float y_;
+    public boolean hasY() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    public float getY() {
+      return y_;
+    }
+    
+    // required float z = 3;
+    public static final int Z_FIELD_NUMBER = 3;
+    private float z_;
+    public boolean hasZ() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    public float getZ() {
+      return z_;
+    }
+    
+    // required float magnitude = 4;
+    public static final int MAGNITUDE_FIELD_NUMBER = 4;
+    private float magnitude_;
+    public boolean hasMagnitude() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    public float getMagnitude() {
+      return magnitude_;
+    }
+    
+    private void initFields() {
+      x_ = 0F;
+      y_ = 0F;
+      z_ = 0F;
+      magnitude_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+      
+      if (!hasX()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasY()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasZ()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMagnitude()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeFloat(1, x_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, y_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeFloat(3, z_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFloat(4, magnitude_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, x_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, y_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, z_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, magnitude_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+    
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static StrokeGeniusProto.MyoDeviceListener.Vector3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(StrokeGeniusProto.MyoDeviceListener.Vector3 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return StrokeGeniusProto.MyoDeviceListener.internal_static_StrokeGeniusProto_Vector3_descriptor;
+      }
+      
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return StrokeGeniusProto.MyoDeviceListener.internal_static_StrokeGeniusProto_Vector3_fieldAccessorTable;
+      }
+      
+      // Construct using StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+      
+      private Builder(BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+      
+      public Builder clear() {
+        super.clear();
+        x_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        y_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        z_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        magnitude_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return StrokeGeniusProto.MyoDeviceListener.Vector3.getDescriptor();
+      }
+      
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 getDefaultInstanceForType() {
+        return StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
+      }
+      
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 build() {
+        StrokeGeniusProto.MyoDeviceListener.Vector3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+      
+      private StrokeGeniusProto.MyoDeviceListener.Vector3 buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        StrokeGeniusProto.MyoDeviceListener.Vector3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 buildPartial() {
+        StrokeGeniusProto.MyoDeviceListener.Vector3 result = new StrokeGeniusProto.MyoDeviceListener.Vector3(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.x_ = x_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.y_ = y_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.z_ = z_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.magnitude_ = magnitude_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof StrokeGeniusProto.MyoDeviceListener.Vector3) {
+          return mergeFrom((StrokeGeniusProto.MyoDeviceListener.Vector3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(StrokeGeniusProto.MyoDeviceListener.Vector3 other) {
+        if (other == StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance()) return this;
+        if (other.hasX()) {
+          setX(other.getX());
+        }
+        if (other.hasY()) {
+          setY(other.getY());
+        }
+        if (other.hasZ()) {
+          setZ(other.getZ());
+        }
+        if (other.hasMagnitude()) {
+          setMagnitude(other.getMagnitude());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public final boolean isInitialized() {
+        if (!hasX()) {
+          
+          return false;
+        }
+        if (!hasY()) {
+          
+          return false;
+        }
+        if (!hasZ()) {
+          
+          return false;
+        }
+        if (!hasMagnitude()) {
+          
+          return false;
+        }
+        return true;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 13: {
+              bitField0_ |= 0x00000001;
+              x_ = input.readFloat();
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              y_ = input.readFloat();
+              break;
+            }
+            case 29: {
+              bitField0_ |= 0x00000004;
+              z_ = input.readFloat();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000008;
+              magnitude_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      }
+      
+      private int bitField0_;
+      
+      // required float x = 1;
+      private float x_ ;
+      public boolean hasX() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      public float getX() {
+        return x_;
+      }
+      public Builder setX(float value) {
+        bitField0_ |= 0x00000001;
+        x_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearX() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        x_ = 0F;
+        onChanged();
+        return this;
+      }
+      
+      // required float y = 2;
+      private float y_ ;
+      public boolean hasY() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      public float getY() {
+        return y_;
+      }
+      public Builder setY(float value) {
+        bitField0_ |= 0x00000002;
+        y_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearY() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        y_ = 0F;
+        onChanged();
+        return this;
+      }
+      
+      // required float z = 3;
+      private float z_ ;
+      public boolean hasZ() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      public float getZ() {
+        return z_;
+      }
+      public Builder setZ(float value) {
+        bitField0_ |= 0x00000004;
+        z_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearZ() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        z_ = 0F;
+        onChanged();
+        return this;
+      }
+      
+      // required float magnitude = 4;
+      private float magnitude_ ;
+      public boolean hasMagnitude() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      public float getMagnitude() {
+        return magnitude_;
+      }
+      public Builder setMagnitude(float value) {
+        bitField0_ |= 0x00000008;
+        magnitude_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearMagnitude() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        magnitude_ = 0F;
+        onChanged();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:StrokeGeniusProto.Vector3)
+    }
+    
+    static {
+      defaultInstance = new Vector3(true);
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:StrokeGeniusProto.Vector3)
+  }
+  
   public interface myoDeviceListenerOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
     
@@ -17,32 +558,32 @@ public final class MyoDeviceListener {
     
     // required .StrokeGeniusProto.Vector3 pose = 2;
     boolean hasPose();
-    StrokeGeniusProto.Vector3.Vector3 getPose();
-    StrokeGeniusProto.Vector3.Vector3OrBuilder getPoseOrBuilder();
+    StrokeGeniusProto.MyoDeviceListener.Vector3 getPose();
+    StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getPoseOrBuilder();
     
     // required .StrokeGeniusProto.Vector3 orientationData = 3;
     boolean hasOrientationData();
-    StrokeGeniusProto.Vector3.Vector3 getOrientationData();
-    StrokeGeniusProto.Vector3.Vector3OrBuilder getOrientationDataOrBuilder();
+    StrokeGeniusProto.MyoDeviceListener.Vector3 getOrientationData();
+    StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getOrientationDataOrBuilder();
     
     // required .StrokeGeniusProto.Vector3 acceleromaterData = 4;
     boolean hasAcceleromaterData();
-    StrokeGeniusProto.Vector3.Vector3 getAcceleromaterData();
-    StrokeGeniusProto.Vector3.Vector3OrBuilder getAcceleromaterDataOrBuilder();
+    StrokeGeniusProto.MyoDeviceListener.Vector3 getAcceleromaterData();
+    StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getAcceleromaterDataOrBuilder();
     
     // required .StrokeGeniusProto.Vector3 gyroscopeData = 5;
     boolean hasGyroscopeData();
-    StrokeGeniusProto.Vector3.Vector3 getGyroscopeData();
-    StrokeGeniusProto.Vector3.Vector3OrBuilder getGyroscopeDataOrBuilder();
+    StrokeGeniusProto.MyoDeviceListener.Vector3 getGyroscopeData();
+    StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getGyroscopeDataOrBuilder();
     
     // required int32 rssi = 6;
     boolean hasRssi();
     int getRssi();
     
-    // required .StrokeGeniusProto.EMGData emgData = 7;
-    boolean hasEmgData();
-    StrokeGeniusProto.EMGData.EMGData getEmgData();
-    StrokeGeniusProto.EMGData.EMGDataOrBuilder getEmgDataOrBuilder();
+    // repeated int32 sensorData = 7 [packed = true];
+    java.util.List<java.lang.Integer> getSensorDataList();
+    int getSensorDataCount();
+    int getSensorData(int index);
   }
   public static final class myoDeviceListener extends
       com.google.protobuf.GeneratedMessage
@@ -85,53 +626,53 @@ public final class MyoDeviceListener {
     
     // required .StrokeGeniusProto.Vector3 pose = 2;
     public static final int POSE_FIELD_NUMBER = 2;
-    private StrokeGeniusProto.Vector3.Vector3 pose_;
+    private StrokeGeniusProto.MyoDeviceListener.Vector3 pose_;
     public boolean hasPose() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public StrokeGeniusProto.Vector3.Vector3 getPose() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3 getPose() {
       return pose_;
     }
-    public StrokeGeniusProto.Vector3.Vector3OrBuilder getPoseOrBuilder() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getPoseOrBuilder() {
       return pose_;
     }
     
     // required .StrokeGeniusProto.Vector3 orientationData = 3;
     public static final int ORIENTATIONDATA_FIELD_NUMBER = 3;
-    private StrokeGeniusProto.Vector3.Vector3 orientationData_;
+    private StrokeGeniusProto.MyoDeviceListener.Vector3 orientationData_;
     public boolean hasOrientationData() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public StrokeGeniusProto.Vector3.Vector3 getOrientationData() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3 getOrientationData() {
       return orientationData_;
     }
-    public StrokeGeniusProto.Vector3.Vector3OrBuilder getOrientationDataOrBuilder() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getOrientationDataOrBuilder() {
       return orientationData_;
     }
     
     // required .StrokeGeniusProto.Vector3 acceleromaterData = 4;
     public static final int ACCELEROMATERDATA_FIELD_NUMBER = 4;
-    private StrokeGeniusProto.Vector3.Vector3 acceleromaterData_;
+    private StrokeGeniusProto.MyoDeviceListener.Vector3 acceleromaterData_;
     public boolean hasAcceleromaterData() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public StrokeGeniusProto.Vector3.Vector3 getAcceleromaterData() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3 getAcceleromaterData() {
       return acceleromaterData_;
     }
-    public StrokeGeniusProto.Vector3.Vector3OrBuilder getAcceleromaterDataOrBuilder() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getAcceleromaterDataOrBuilder() {
       return acceleromaterData_;
     }
     
     // required .StrokeGeniusProto.Vector3 gyroscopeData = 5;
     public static final int GYROSCOPEDATA_FIELD_NUMBER = 5;
-    private StrokeGeniusProto.Vector3.Vector3 gyroscopeData_;
+    private StrokeGeniusProto.MyoDeviceListener.Vector3 gyroscopeData_;
     public boolean hasGyroscopeData() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public StrokeGeniusProto.Vector3.Vector3 getGyroscopeData() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3 getGyroscopeData() {
       return gyroscopeData_;
     }
-    public StrokeGeniusProto.Vector3.Vector3OrBuilder getGyroscopeDataOrBuilder() {
+    public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getGyroscopeDataOrBuilder() {
       return gyroscopeData_;
     }
     
@@ -145,27 +686,29 @@ public final class MyoDeviceListener {
       return rssi_;
     }
     
-    // required .StrokeGeniusProto.EMGData emgData = 7;
-    public static final int EMGDATA_FIELD_NUMBER = 7;
-    private StrokeGeniusProto.EMGData.EMGData emgData_;
-    public boolean hasEmgData() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+    // repeated int32 sensorData = 7 [packed = true];
+    public static final int SENSORDATA_FIELD_NUMBER = 7;
+    private java.util.List<java.lang.Integer> sensorData_;
+    public java.util.List<java.lang.Integer>
+        getSensorDataList() {
+      return sensorData_;
     }
-    public StrokeGeniusProto.EMGData.EMGData getEmgData() {
-      return emgData_;
+    public int getSensorDataCount() {
+      return sensorData_.size();
     }
-    public StrokeGeniusProto.EMGData.EMGDataOrBuilder getEmgDataOrBuilder() {
-      return emgData_;
+    public int getSensorData(int index) {
+      return sensorData_.get(index);
     }
+    private int sensorDataMemoizedSerializedSize = -1;
     
     private void initFields() {
       timeStamp_ = 0;
-      pose_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
-      orientationData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
-      acceleromaterData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
-      gyroscopeData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+      pose_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
+      orientationData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
+      acceleromaterData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
+      gyroscopeData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
       rssi_ = 0;
-      emgData_ = StrokeGeniusProto.EMGData.EMGData.getDefaultInstance();
+      sensorData_ = java.util.Collections.emptyList();;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -193,10 +736,6 @@ public final class MyoDeviceListener {
         return false;
       }
       if (!hasRssi()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasEmgData()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -241,8 +780,12 @@ public final class MyoDeviceListener {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeInt32(6, rssi_);
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeMessage(7, emgData_);
+      if (getSensorDataList().size() > 0) {
+        output.writeRawVarint32(58);
+        output.writeRawVarint32(sensorDataMemoizedSerializedSize);
+      }
+      for (int i = 0; i < sensorData_.size(); i++) {
+        output.writeInt32NoTag(sensorData_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -277,9 +820,19 @@ public final class MyoDeviceListener {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, rssi_);
       }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, emgData_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < sensorData_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(sensorData_.get(i));
+        }
+        size += dataSize;
+        if (!getSensorDataList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        sensorDataMemoizedSerializedSize = dataSize;
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -401,7 +954,6 @@ public final class MyoDeviceListener {
           getOrientationDataFieldBuilder();
           getAcceleromaterDataFieldBuilder();
           getGyroscopeDataFieldBuilder();
-          getEmgDataFieldBuilder();
         }
       }
       private static Builder create() {
@@ -413,36 +965,32 @@ public final class MyoDeviceListener {
         timeStamp_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (poseBuilder_ == null) {
-          pose_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          pose_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
         } else {
           poseBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (orientationDataBuilder_ == null) {
-          orientationData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          orientationData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
         } else {
           orientationDataBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (acceleromaterDataBuilder_ == null) {
-          acceleromaterData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          acceleromaterData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
         } else {
           acceleromaterDataBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         if (gyroscopeDataBuilder_ == null) {
-          gyroscopeData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          gyroscopeData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
         } else {
           gyroscopeDataBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
         rssi_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        if (emgDataBuilder_ == null) {
-          emgData_ = StrokeGeniusProto.EMGData.EMGData.getDefaultInstance();
-        } else {
-          emgDataBuilder_.clear();
-        }
+        sensorData_ = java.util.Collections.emptyList();;
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
@@ -522,14 +1070,11 @@ public final class MyoDeviceListener {
           to_bitField0_ |= 0x00000020;
         }
         result.rssi_ = rssi_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          sensorData_ = java.util.Collections.unmodifiableList(sensorData_);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
-        if (emgDataBuilder_ == null) {
-          result.emgData_ = emgData_;
-        } else {
-          result.emgData_ = emgDataBuilder_.build();
-        }
+        result.sensorData_ = sensorData_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -564,8 +1109,15 @@ public final class MyoDeviceListener {
         if (other.hasRssi()) {
           setRssi(other.getRssi());
         }
-        if (other.hasEmgData()) {
-          mergeEmgData(other.getEmgData());
+        if (!other.sensorData_.isEmpty()) {
+          if (sensorData_.isEmpty()) {
+            sensorData_ = other.sensorData_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureSensorDataIsMutable();
+            sensorData_.addAll(other.sensorData_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -593,10 +1145,6 @@ public final class MyoDeviceListener {
           return false;
         }
         if (!hasRssi()) {
-          
-          return false;
-        }
-        if (!hasEmgData()) {
           
           return false;
         }
@@ -648,7 +1196,7 @@ public final class MyoDeviceListener {
               break;
             }
             case 18: {
-              StrokeGeniusProto.Vector3.Vector3.Builder subBuilder = StrokeGeniusProto.Vector3.Vector3.newBuilder();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.Builder subBuilder = StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder();
               if (hasPose()) {
                 subBuilder.mergeFrom(getPose());
               }
@@ -657,7 +1205,7 @@ public final class MyoDeviceListener {
               break;
             }
             case 26: {
-              StrokeGeniusProto.Vector3.Vector3.Builder subBuilder = StrokeGeniusProto.Vector3.Vector3.newBuilder();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.Builder subBuilder = StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder();
               if (hasOrientationData()) {
                 subBuilder.mergeFrom(getOrientationData());
               }
@@ -666,7 +1214,7 @@ public final class MyoDeviceListener {
               break;
             }
             case 34: {
-              StrokeGeniusProto.Vector3.Vector3.Builder subBuilder = StrokeGeniusProto.Vector3.Vector3.newBuilder();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.Builder subBuilder = StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder();
               if (hasAcceleromaterData()) {
                 subBuilder.mergeFrom(getAcceleromaterData());
               }
@@ -675,7 +1223,7 @@ public final class MyoDeviceListener {
               break;
             }
             case 42: {
-              StrokeGeniusProto.Vector3.Vector3.Builder subBuilder = StrokeGeniusProto.Vector3.Vector3.newBuilder();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.Builder subBuilder = StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder();
               if (hasGyroscopeData()) {
                 subBuilder.mergeFrom(getGyroscopeData());
               }
@@ -688,13 +1236,18 @@ public final class MyoDeviceListener {
               rssi_ = input.readInt32();
               break;
             }
+            case 56: {
+              ensureSensorDataIsMutable();
+              sensorData_.add(input.readInt32());
+              break;
+            }
             case 58: {
-              StrokeGeniusProto.EMGData.EMGData.Builder subBuilder = StrokeGeniusProto.EMGData.EMGData.newBuilder();
-              if (hasEmgData()) {
-                subBuilder.mergeFrom(getEmgData());
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              while (input.getBytesUntilLimit() > 0) {
+                addSensorData(input.readInt32());
               }
-              input.readMessage(subBuilder, extensionRegistry);
-              setEmgData(subBuilder.buildPartial());
+              input.popLimit(limit);
               break;
             }
           }
@@ -725,20 +1278,20 @@ public final class MyoDeviceListener {
       }
       
       // required .StrokeGeniusProto.Vector3 pose = 2;
-      private StrokeGeniusProto.Vector3.Vector3 pose_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+      private StrokeGeniusProto.MyoDeviceListener.Vector3 pose_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> poseBuilder_;
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> poseBuilder_;
       public boolean hasPose() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public StrokeGeniusProto.Vector3.Vector3 getPose() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 getPose() {
         if (poseBuilder_ == null) {
           return pose_;
         } else {
           return poseBuilder_.getMessage();
         }
       }
-      public Builder setPose(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder setPose(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (poseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -752,7 +1305,7 @@ public final class MyoDeviceListener {
         return this;
       }
       public Builder setPose(
-          StrokeGeniusProto.Vector3.Vector3.Builder builderForValue) {
+          StrokeGeniusProto.MyoDeviceListener.Vector3.Builder builderForValue) {
         if (poseBuilder_ == null) {
           pose_ = builderForValue.build();
           onChanged();
@@ -762,12 +1315,12 @@ public final class MyoDeviceListener {
         bitField0_ |= 0x00000002;
         return this;
       }
-      public Builder mergePose(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder mergePose(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (poseBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              pose_ != StrokeGeniusProto.Vector3.Vector3.getDefaultInstance()) {
+              pose_ != StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance()) {
             pose_ =
-              StrokeGeniusProto.Vector3.Vector3.newBuilder(pose_).mergeFrom(value).buildPartial();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder(pose_).mergeFrom(value).buildPartial();
           } else {
             pose_ = value;
           }
@@ -780,7 +1333,7 @@ public final class MyoDeviceListener {
       }
       public Builder clearPose() {
         if (poseBuilder_ == null) {
-          pose_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          pose_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
           onChanged();
         } else {
           poseBuilder_.clear();
@@ -788,12 +1341,12 @@ public final class MyoDeviceListener {
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
-      public StrokeGeniusProto.Vector3.Vector3.Builder getPoseBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3.Builder getPoseBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getPoseFieldBuilder().getBuilder();
       }
-      public StrokeGeniusProto.Vector3.Vector3OrBuilder getPoseOrBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getPoseOrBuilder() {
         if (poseBuilder_ != null) {
           return poseBuilder_.getMessageOrBuilder();
         } else {
@@ -801,11 +1354,11 @@ public final class MyoDeviceListener {
         }
       }
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> 
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> 
           getPoseFieldBuilder() {
         if (poseBuilder_ == null) {
           poseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder>(
+              StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder>(
                   pose_,
                   getParentForChildren(),
                   isClean());
@@ -815,20 +1368,20 @@ public final class MyoDeviceListener {
       }
       
       // required .StrokeGeniusProto.Vector3 orientationData = 3;
-      private StrokeGeniusProto.Vector3.Vector3 orientationData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+      private StrokeGeniusProto.MyoDeviceListener.Vector3 orientationData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> orientationDataBuilder_;
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> orientationDataBuilder_;
       public boolean hasOrientationData() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public StrokeGeniusProto.Vector3.Vector3 getOrientationData() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 getOrientationData() {
         if (orientationDataBuilder_ == null) {
           return orientationData_;
         } else {
           return orientationDataBuilder_.getMessage();
         }
       }
-      public Builder setOrientationData(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder setOrientationData(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (orientationDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -842,7 +1395,7 @@ public final class MyoDeviceListener {
         return this;
       }
       public Builder setOrientationData(
-          StrokeGeniusProto.Vector3.Vector3.Builder builderForValue) {
+          StrokeGeniusProto.MyoDeviceListener.Vector3.Builder builderForValue) {
         if (orientationDataBuilder_ == null) {
           orientationData_ = builderForValue.build();
           onChanged();
@@ -852,12 +1405,12 @@ public final class MyoDeviceListener {
         bitField0_ |= 0x00000004;
         return this;
       }
-      public Builder mergeOrientationData(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder mergeOrientationData(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (orientationDataBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              orientationData_ != StrokeGeniusProto.Vector3.Vector3.getDefaultInstance()) {
+              orientationData_ != StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance()) {
             orientationData_ =
-              StrokeGeniusProto.Vector3.Vector3.newBuilder(orientationData_).mergeFrom(value).buildPartial();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder(orientationData_).mergeFrom(value).buildPartial();
           } else {
             orientationData_ = value;
           }
@@ -870,7 +1423,7 @@ public final class MyoDeviceListener {
       }
       public Builder clearOrientationData() {
         if (orientationDataBuilder_ == null) {
-          orientationData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          orientationData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
           onChanged();
         } else {
           orientationDataBuilder_.clear();
@@ -878,12 +1431,12 @@ public final class MyoDeviceListener {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      public StrokeGeniusProto.Vector3.Vector3.Builder getOrientationDataBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3.Builder getOrientationDataBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getOrientationDataFieldBuilder().getBuilder();
       }
-      public StrokeGeniusProto.Vector3.Vector3OrBuilder getOrientationDataOrBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getOrientationDataOrBuilder() {
         if (orientationDataBuilder_ != null) {
           return orientationDataBuilder_.getMessageOrBuilder();
         } else {
@@ -891,11 +1444,11 @@ public final class MyoDeviceListener {
         }
       }
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> 
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> 
           getOrientationDataFieldBuilder() {
         if (orientationDataBuilder_ == null) {
           orientationDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder>(
+              StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder>(
                   orientationData_,
                   getParentForChildren(),
                   isClean());
@@ -905,20 +1458,20 @@ public final class MyoDeviceListener {
       }
       
       // required .StrokeGeniusProto.Vector3 acceleromaterData = 4;
-      private StrokeGeniusProto.Vector3.Vector3 acceleromaterData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+      private StrokeGeniusProto.MyoDeviceListener.Vector3 acceleromaterData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> acceleromaterDataBuilder_;
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> acceleromaterDataBuilder_;
       public boolean hasAcceleromaterData() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public StrokeGeniusProto.Vector3.Vector3 getAcceleromaterData() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 getAcceleromaterData() {
         if (acceleromaterDataBuilder_ == null) {
           return acceleromaterData_;
         } else {
           return acceleromaterDataBuilder_.getMessage();
         }
       }
-      public Builder setAcceleromaterData(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder setAcceleromaterData(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (acceleromaterDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -932,7 +1485,7 @@ public final class MyoDeviceListener {
         return this;
       }
       public Builder setAcceleromaterData(
-          StrokeGeniusProto.Vector3.Vector3.Builder builderForValue) {
+          StrokeGeniusProto.MyoDeviceListener.Vector3.Builder builderForValue) {
         if (acceleromaterDataBuilder_ == null) {
           acceleromaterData_ = builderForValue.build();
           onChanged();
@@ -942,12 +1495,12 @@ public final class MyoDeviceListener {
         bitField0_ |= 0x00000008;
         return this;
       }
-      public Builder mergeAcceleromaterData(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder mergeAcceleromaterData(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (acceleromaterDataBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              acceleromaterData_ != StrokeGeniusProto.Vector3.Vector3.getDefaultInstance()) {
+              acceleromaterData_ != StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance()) {
             acceleromaterData_ =
-              StrokeGeniusProto.Vector3.Vector3.newBuilder(acceleromaterData_).mergeFrom(value).buildPartial();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder(acceleromaterData_).mergeFrom(value).buildPartial();
           } else {
             acceleromaterData_ = value;
           }
@@ -960,7 +1513,7 @@ public final class MyoDeviceListener {
       }
       public Builder clearAcceleromaterData() {
         if (acceleromaterDataBuilder_ == null) {
-          acceleromaterData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          acceleromaterData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
           onChanged();
         } else {
           acceleromaterDataBuilder_.clear();
@@ -968,12 +1521,12 @@ public final class MyoDeviceListener {
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
-      public StrokeGeniusProto.Vector3.Vector3.Builder getAcceleromaterDataBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3.Builder getAcceleromaterDataBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getAcceleromaterDataFieldBuilder().getBuilder();
       }
-      public StrokeGeniusProto.Vector3.Vector3OrBuilder getAcceleromaterDataOrBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getAcceleromaterDataOrBuilder() {
         if (acceleromaterDataBuilder_ != null) {
           return acceleromaterDataBuilder_.getMessageOrBuilder();
         } else {
@@ -981,11 +1534,11 @@ public final class MyoDeviceListener {
         }
       }
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> 
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> 
           getAcceleromaterDataFieldBuilder() {
         if (acceleromaterDataBuilder_ == null) {
           acceleromaterDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder>(
+              StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder>(
                   acceleromaterData_,
                   getParentForChildren(),
                   isClean());
@@ -995,20 +1548,20 @@ public final class MyoDeviceListener {
       }
       
       // required .StrokeGeniusProto.Vector3 gyroscopeData = 5;
-      private StrokeGeniusProto.Vector3.Vector3 gyroscopeData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+      private StrokeGeniusProto.MyoDeviceListener.Vector3 gyroscopeData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> gyroscopeDataBuilder_;
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> gyroscopeDataBuilder_;
       public boolean hasGyroscopeData() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
-      public StrokeGeniusProto.Vector3.Vector3 getGyroscopeData() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3 getGyroscopeData() {
         if (gyroscopeDataBuilder_ == null) {
           return gyroscopeData_;
         } else {
           return gyroscopeDataBuilder_.getMessage();
         }
       }
-      public Builder setGyroscopeData(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder setGyroscopeData(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (gyroscopeDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1022,7 +1575,7 @@ public final class MyoDeviceListener {
         return this;
       }
       public Builder setGyroscopeData(
-          StrokeGeniusProto.Vector3.Vector3.Builder builderForValue) {
+          StrokeGeniusProto.MyoDeviceListener.Vector3.Builder builderForValue) {
         if (gyroscopeDataBuilder_ == null) {
           gyroscopeData_ = builderForValue.build();
           onChanged();
@@ -1032,12 +1585,12 @@ public final class MyoDeviceListener {
         bitField0_ |= 0x00000010;
         return this;
       }
-      public Builder mergeGyroscopeData(StrokeGeniusProto.Vector3.Vector3 value) {
+      public Builder mergeGyroscopeData(StrokeGeniusProto.MyoDeviceListener.Vector3 value) {
         if (gyroscopeDataBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010) &&
-              gyroscopeData_ != StrokeGeniusProto.Vector3.Vector3.getDefaultInstance()) {
+              gyroscopeData_ != StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance()) {
             gyroscopeData_ =
-              StrokeGeniusProto.Vector3.Vector3.newBuilder(gyroscopeData_).mergeFrom(value).buildPartial();
+              StrokeGeniusProto.MyoDeviceListener.Vector3.newBuilder(gyroscopeData_).mergeFrom(value).buildPartial();
           } else {
             gyroscopeData_ = value;
           }
@@ -1050,7 +1603,7 @@ public final class MyoDeviceListener {
       }
       public Builder clearGyroscopeData() {
         if (gyroscopeDataBuilder_ == null) {
-          gyroscopeData_ = StrokeGeniusProto.Vector3.Vector3.getDefaultInstance();
+          gyroscopeData_ = StrokeGeniusProto.MyoDeviceListener.Vector3.getDefaultInstance();
           onChanged();
         } else {
           gyroscopeDataBuilder_.clear();
@@ -1058,12 +1611,12 @@ public final class MyoDeviceListener {
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
-      public StrokeGeniusProto.Vector3.Vector3.Builder getGyroscopeDataBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3.Builder getGyroscopeDataBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getGyroscopeDataFieldBuilder().getBuilder();
       }
-      public StrokeGeniusProto.Vector3.Vector3OrBuilder getGyroscopeDataOrBuilder() {
+      public StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder getGyroscopeDataOrBuilder() {
         if (gyroscopeDataBuilder_ != null) {
           return gyroscopeDataBuilder_.getMessageOrBuilder();
         } else {
@@ -1071,11 +1624,11 @@ public final class MyoDeviceListener {
         }
       }
       private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder> 
+          StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder> 
           getGyroscopeDataFieldBuilder() {
         if (gyroscopeDataBuilder_ == null) {
           gyroscopeDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              StrokeGeniusProto.Vector3.Vector3, StrokeGeniusProto.Vector3.Vector3.Builder, StrokeGeniusProto.Vector3.Vector3OrBuilder>(
+              StrokeGeniusProto.MyoDeviceListener.Vector3, StrokeGeniusProto.MyoDeviceListener.Vector3.Builder, StrokeGeniusProto.MyoDeviceListener.Vector3OrBuilder>(
                   gyroscopeData_,
                   getParentForChildren(),
                   isClean());
@@ -1105,94 +1658,49 @@ public final class MyoDeviceListener {
         return this;
       }
       
-      // required .StrokeGeniusProto.EMGData emgData = 7;
-      private StrokeGeniusProto.EMGData.EMGData emgData_ = StrokeGeniusProto.EMGData.EMGData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.EMGData.EMGData, StrokeGeniusProto.EMGData.EMGData.Builder, StrokeGeniusProto.EMGData.EMGDataOrBuilder> emgDataBuilder_;
-      public boolean hasEmgData() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+      // repeated int32 sensorData = 7 [packed = true];
+      private java.util.List<java.lang.Integer> sensorData_ = java.util.Collections.emptyList();;
+      private void ensureSensorDataIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          sensorData_ = new java.util.ArrayList<java.lang.Integer>(sensorData_);
+          bitField0_ |= 0x00000040;
+         }
       }
-      public StrokeGeniusProto.EMGData.EMGData getEmgData() {
-        if (emgDataBuilder_ == null) {
-          return emgData_;
-        } else {
-          return emgDataBuilder_.getMessage();
-        }
+      public java.util.List<java.lang.Integer>
+          getSensorDataList() {
+        return java.util.Collections.unmodifiableList(sensorData_);
       }
-      public Builder setEmgData(StrokeGeniusProto.EMGData.EMGData value) {
-        if (emgDataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          emgData_ = value;
-          onChanged();
-        } else {
-          emgDataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
+      public int getSensorDataCount() {
+        return sensorData_.size();
       }
-      public Builder setEmgData(
-          StrokeGeniusProto.EMGData.EMGData.Builder builderForValue) {
-        if (emgDataBuilder_ == null) {
-          emgData_ = builderForValue.build();
-          onChanged();
-        } else {
-          emgDataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        return this;
+      public int getSensorData(int index) {
+        return sensorData_.get(index);
       }
-      public Builder mergeEmgData(StrokeGeniusProto.EMGData.EMGData value) {
-        if (emgDataBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040) &&
-              emgData_ != StrokeGeniusProto.EMGData.EMGData.getDefaultInstance()) {
-            emgData_ =
-              StrokeGeniusProto.EMGData.EMGData.newBuilder(emgData_).mergeFrom(value).buildPartial();
-          } else {
-            emgData_ = value;
-          }
-          onChanged();
-        } else {
-          emgDataBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      public Builder clearEmgData() {
-        if (emgDataBuilder_ == null) {
-          emgData_ = StrokeGeniusProto.EMGData.EMGData.getDefaultInstance();
-          onChanged();
-        } else {
-          emgDataBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-      public StrokeGeniusProto.EMGData.EMGData.Builder getEmgDataBuilder() {
-        bitField0_ |= 0x00000040;
+      public Builder setSensorData(
+          int index, int value) {
+        ensureSensorDataIsMutable();
+        sensorData_.set(index, value);
         onChanged();
-        return getEmgDataFieldBuilder().getBuilder();
+        return this;
       }
-      public StrokeGeniusProto.EMGData.EMGDataOrBuilder getEmgDataOrBuilder() {
-        if (emgDataBuilder_ != null) {
-          return emgDataBuilder_.getMessageOrBuilder();
-        } else {
-          return emgData_;
-        }
+      public Builder addSensorData(int value) {
+        ensureSensorDataIsMutable();
+        sensorData_.add(value);
+        onChanged();
+        return this;
       }
-      private com.google.protobuf.SingleFieldBuilder<
-          StrokeGeniusProto.EMGData.EMGData, StrokeGeniusProto.EMGData.EMGData.Builder, StrokeGeniusProto.EMGData.EMGDataOrBuilder> 
-          getEmgDataFieldBuilder() {
-        if (emgDataBuilder_ == null) {
-          emgDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              StrokeGeniusProto.EMGData.EMGData, StrokeGeniusProto.EMGData.EMGData.Builder, StrokeGeniusProto.EMGData.EMGDataOrBuilder>(
-                  emgData_,
-                  getParentForChildren(),
-                  isClean());
-          emgData_ = null;
-        }
-        return emgDataBuilder_;
+      public Builder addAllSensorData(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureSensorDataIsMutable();
+        super.addAll(values, sensorData_);
+        onChanged();
+        return this;
+      }
+      public Builder clearSensorData() {
+        sensorData_ = java.util.Collections.emptyList();;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
       }
       
       // @@protoc_insertion_point(builder_scope:StrokeGeniusProto.myoDeviceListener)
@@ -1206,6 +1714,11 @@ public final class MyoDeviceListener {
     // @@protoc_insertion_point(class_scope:StrokeGeniusProto.myoDeviceListener)
   }
   
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_StrokeGeniusProto_Vector3_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_StrokeGeniusProto_Vector3_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_StrokeGeniusProto_myoDeviceListener_descriptor;
   private static
@@ -1221,27 +1734,35 @@ public final class MyoDeviceListener {
   static {
     java.lang.String[] descriptorData = {
       "\n\027MyoDeviceListener.proto\022\021StrokeGeniusP" +
-      "roto\032\rVector3.proto\032\020Quaternion.proto\032\rE" +
-      "MGData.proto\"\252\002\n\021myoDeviceListener\022\021\n\tti" +
-      "meStamp\030\001 \002(\005\022(\n\004pose\030\002 \002(\0132\032.StrokeGeni" +
-      "usProto.Vector3\0223\n\017orientationData\030\003 \002(\013" +
-      "2\032.StrokeGeniusProto.Vector3\0225\n\021accelero" +
-      "materData\030\004 \002(\0132\032.StrokeGeniusProto.Vect" +
-      "or3\0221\n\rgyroscopeData\030\005 \002(\0132\032.StrokeGeniu" +
-      "sProto.Vector3\022\014\n\004rssi\030\006 \002(\005\022+\n\007emgData\030" +
-      "\007 \002(\0132\032.StrokeGeniusProto.EMGData"
+      "roto\"=\n\007Vector3\022\t\n\001x\030\001 \002(\002\022\t\n\001y\030\002 \002(\002\022\t\n" +
+      "\001z\030\003 \002(\002\022\021\n\tmagnitude\030\004 \002(\002\"\225\002\n\021myoDevic" +
+      "eListener\022\021\n\ttimeStamp\030\001 \002(\005\022(\n\004pose\030\002 \002" +
+      "(\0132\032.StrokeGeniusProto.Vector3\0223\n\017orient" +
+      "ationData\030\003 \002(\0132\032.StrokeGeniusProto.Vect" +
+      "or3\0225\n\021acceleromaterData\030\004 \002(\0132\032.StrokeG" +
+      "eniusProto.Vector3\0221\n\rgyroscopeData\030\005 \002(" +
+      "\0132\032.StrokeGeniusProto.Vector3\022\014\n\004rssi\030\006 " +
+      "\002(\005\022\026\n\nsensorData\030\007 \003(\005B\002\020\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_StrokeGeniusProto_myoDeviceListener_descriptor =
+          internal_static_StrokeGeniusProto_Vector3_descriptor =
             getDescriptor().getMessageTypes().get(0);
+          internal_static_StrokeGeniusProto_Vector3_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_StrokeGeniusProto_Vector3_descriptor,
+              new java.lang.String[] { "X", "Y", "Z", "Magnitude", },
+              StrokeGeniusProto.MyoDeviceListener.Vector3.class,
+              StrokeGeniusProto.MyoDeviceListener.Vector3.Builder.class);
+          internal_static_StrokeGeniusProto_myoDeviceListener_descriptor =
+            getDescriptor().getMessageTypes().get(1);
           internal_static_StrokeGeniusProto_myoDeviceListener_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_StrokeGeniusProto_myoDeviceListener_descriptor,
-              new java.lang.String[] { "TimeStamp", "Pose", "OrientationData", "AcceleromaterData", "GyroscopeData", "Rssi", "EmgData", },
+              new java.lang.String[] { "TimeStamp", "Pose", "OrientationData", "AcceleromaterData", "GyroscopeData", "Rssi", "SensorData", },
               StrokeGeniusProto.MyoDeviceListener.myoDeviceListener.class,
               StrokeGeniusProto.MyoDeviceListener.myoDeviceListener.Builder.class);
           return null;
@@ -1250,9 +1771,6 @@ public final class MyoDeviceListener {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          StrokeGeniusProto.Vector3.getDescriptor(),
-          StrokeGeniusProto.Quaternion.getDescriptor(),
-          StrokeGeniusProto.EMGData.getDescriptor(),
         }, assigner);
   }
   

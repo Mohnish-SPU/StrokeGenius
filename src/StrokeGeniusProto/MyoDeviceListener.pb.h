@@ -23,9 +23,6 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/generated_message_reflection.h>
-#include "Vector3.pb.h"
-#include "Quaternion.pb.h"
-#include "EMGData.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace StrokeGeniusProto {
@@ -35,9 +32,122 @@ void  protobuf_AddDesc_MyoDeviceListener_2eproto();
 void protobuf_AssignDesc_MyoDeviceListener_2eproto();
 void protobuf_ShutdownFile_MyoDeviceListener_2eproto();
 
+class Vector3;
 class myoDeviceListener;
 
 // ===================================================================
+
+class Vector3 : public ::google::protobuf::Message {
+ public:
+  Vector3();
+  virtual ~Vector3();
+  
+  Vector3(const Vector3& from);
+  
+  inline Vector3& operator=(const Vector3& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+  
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+  
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Vector3& default_instance();
+  
+  void Swap(Vector3* other);
+  
+  // implements Message ----------------------------------------------
+  
+  Vector3* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Vector3& from);
+  void MergeFrom(const Vector3& from);
+  void Clear();
+  bool IsInitialized() const;
+  
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  
+  ::google::protobuf::Metadata GetMetadata() const;
+  
+  // nested types ----------------------------------------------------
+  
+  // accessors -------------------------------------------------------
+  
+  // required float x = 1;
+  inline bool has_x() const;
+  inline void clear_x();
+  static const int kXFieldNumber = 1;
+  inline float x() const;
+  inline void set_x(float value);
+  
+  // required float y = 2;
+  inline bool has_y() const;
+  inline void clear_y();
+  static const int kYFieldNumber = 2;
+  inline float y() const;
+  inline void set_y(float value);
+  
+  // required float z = 3;
+  inline bool has_z() const;
+  inline void clear_z();
+  static const int kZFieldNumber = 3;
+  inline float z() const;
+  inline void set_z(float value);
+  
+  // required float magnitude = 4;
+  inline bool has_magnitude() const;
+  inline void clear_magnitude();
+  static const int kMagnitudeFieldNumber = 4;
+  inline float magnitude() const;
+  inline void set_magnitude(float value);
+  
+  // @@protoc_insertion_point(class_scope:StrokeGeniusProto.Vector3)
+ private:
+  inline void set_has_x();
+  inline void clear_has_x();
+  inline void set_has_y();
+  inline void clear_has_y();
+  inline void set_has_z();
+  inline void clear_has_z();
+  inline void set_has_magnitude();
+  inline void clear_has_magnitude();
+  
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  
+  float x_;
+  float y_;
+  float z_;
+  float magnitude_;
+  
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  
+  friend void  protobuf_AddDesc_MyoDeviceListener_2eproto();
+  friend void protobuf_AssignDesc_MyoDeviceListener_2eproto();
+  friend void protobuf_ShutdownFile_MyoDeviceListener_2eproto();
+  
+  void InitAsDefaultInstance();
+  static Vector3* default_instance_;
+};
+// -------------------------------------------------------------------
 
 class myoDeviceListener : public ::google::protobuf::Message {
  public:
@@ -139,13 +249,17 @@ class myoDeviceListener : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 rssi() const;
   inline void set_rssi(::google::protobuf::int32 value);
   
-  // required .StrokeGeniusProto.EMGData emgData = 7;
-  inline bool has_emgdata() const;
-  inline void clear_emgdata();
-  static const int kEmgDataFieldNumber = 7;
-  inline const ::StrokeGeniusProto::EMGData& emgdata() const;
-  inline ::StrokeGeniusProto::EMGData* mutable_emgdata();
-  inline ::StrokeGeniusProto::EMGData* release_emgdata();
+  // repeated int32 sensorData = 7 [packed = true];
+  inline int sensordata_size() const;
+  inline void clear_sensordata();
+  static const int kSensorDataFieldNumber = 7;
+  inline ::google::protobuf::int32 sensordata(int index) const;
+  inline void set_sensordata(int index, ::google::protobuf::int32 value);
+  inline void add_sensordata(::google::protobuf::int32 value);
+  inline const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
+      sensordata() const;
+  inline ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
+      mutable_sensordata();
   
   // @@protoc_insertion_point(class_scope:StrokeGeniusProto.myoDeviceListener)
  private:
@@ -161,8 +275,6 @@ class myoDeviceListener : public ::google::protobuf::Message {
   inline void clear_has_gyroscopedata();
   inline void set_has_rssi();
   inline void clear_has_rssi();
-  inline void set_has_emgdata();
-  inline void clear_has_emgdata();
   
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
   
@@ -172,7 +284,8 @@ class myoDeviceListener : public ::google::protobuf::Message {
   ::google::protobuf::int32 rssi_;
   ::StrokeGeniusProto::Vector3* acceleromaterdata_;
   ::StrokeGeniusProto::Vector3* gyroscopedata_;
-  ::StrokeGeniusProto::EMGData* emgdata_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::int32 > sensordata_;
+  mutable int _sensordata_cached_byte_size_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(7 + 31) / 32];
@@ -188,6 +301,98 @@ class myoDeviceListener : public ::google::protobuf::Message {
 
 
 // ===================================================================
+
+// Vector3
+
+// required float x = 1;
+inline bool Vector3::has_x() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void Vector3::set_has_x() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void Vector3::clear_has_x() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void Vector3::clear_x() {
+  x_ = 0;
+  clear_has_x();
+}
+inline float Vector3::x() const {
+  return x_;
+}
+inline void Vector3::set_x(float value) {
+  set_has_x();
+  x_ = value;
+}
+
+// required float y = 2;
+inline bool Vector3::has_y() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void Vector3::set_has_y() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void Vector3::clear_has_y() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void Vector3::clear_y() {
+  y_ = 0;
+  clear_has_y();
+}
+inline float Vector3::y() const {
+  return y_;
+}
+inline void Vector3::set_y(float value) {
+  set_has_y();
+  y_ = value;
+}
+
+// required float z = 3;
+inline bool Vector3::has_z() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void Vector3::set_has_z() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void Vector3::clear_has_z() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void Vector3::clear_z() {
+  z_ = 0;
+  clear_has_z();
+}
+inline float Vector3::z() const {
+  return z_;
+}
+inline void Vector3::set_z(float value) {
+  set_has_z();
+  z_ = value;
+}
+
+// required float magnitude = 4;
+inline bool Vector3::has_magnitude() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void Vector3::set_has_magnitude() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void Vector3::clear_has_magnitude() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void Vector3::clear_magnitude() {
+  magnitude_ = 0;
+  clear_has_magnitude();
+}
+inline float Vector3::magnitude() const {
+  return magnitude_;
+}
+inline void Vector3::set_magnitude(float value) {
+  set_has_magnitude();
+  magnitude_ = value;
+}
+
+// -------------------------------------------------------------------
 
 // myoDeviceListener
 
@@ -351,33 +556,29 @@ inline void myoDeviceListener::set_rssi(::google::protobuf::int32 value) {
   rssi_ = value;
 }
 
-// required .StrokeGeniusProto.EMGData emgData = 7;
-inline bool myoDeviceListener::has_emgdata() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+// repeated int32 sensorData = 7 [packed = true];
+inline int myoDeviceListener::sensordata_size() const {
+  return sensordata_.size();
 }
-inline void myoDeviceListener::set_has_emgdata() {
-  _has_bits_[0] |= 0x00000040u;
+inline void myoDeviceListener::clear_sensordata() {
+  sensordata_.Clear();
 }
-inline void myoDeviceListener::clear_has_emgdata() {
-  _has_bits_[0] &= ~0x00000040u;
+inline ::google::protobuf::int32 myoDeviceListener::sensordata(int index) const {
+  return sensordata_.Get(index);
 }
-inline void myoDeviceListener::clear_emgdata() {
-  if (emgdata_ != NULL) emgdata_->::StrokeGeniusProto::EMGData::Clear();
-  clear_has_emgdata();
+inline void myoDeviceListener::set_sensordata(int index, ::google::protobuf::int32 value) {
+  sensordata_.Set(index, value);
 }
-inline const ::StrokeGeniusProto::EMGData& myoDeviceListener::emgdata() const {
-  return emgdata_ != NULL ? *emgdata_ : *default_instance_->emgdata_;
+inline void myoDeviceListener::add_sensordata(::google::protobuf::int32 value) {
+  sensordata_.Add(value);
 }
-inline ::StrokeGeniusProto::EMGData* myoDeviceListener::mutable_emgdata() {
-  set_has_emgdata();
-  if (emgdata_ == NULL) emgdata_ = new ::StrokeGeniusProto::EMGData;
-  return emgdata_;
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
+myoDeviceListener::sensordata() const {
+  return sensordata_;
 }
-inline ::StrokeGeniusProto::EMGData* myoDeviceListener::release_emgdata() {
-  clear_has_emgdata();
-  ::StrokeGeniusProto::EMGData* temp = emgdata_;
-  emgdata_ = NULL;
-  return temp;
+inline ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
+myoDeviceListener::mutable_sensordata() {
+  return &sensordata_;
 }
 
 

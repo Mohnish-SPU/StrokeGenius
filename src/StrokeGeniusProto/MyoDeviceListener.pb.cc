@@ -17,6 +17,9 @@ namespace StrokeGeniusProto {
 
 namespace {
 
+const ::google::protobuf::Descriptor* Vector3_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Vector3_reflection_ = NULL;
 const ::google::protobuf::Descriptor* myoDeviceListener_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   myoDeviceListener_reflection_ = NULL;
@@ -30,7 +33,25 @@ void protobuf_AssignDesc_MyoDeviceListener_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "MyoDeviceListener.proto");
   GOOGLE_CHECK(file != NULL);
-  myoDeviceListener_descriptor_ = file->message_type(0);
+  Vector3_descriptor_ = file->message_type(0);
+  static const int Vector3_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Vector3, x_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Vector3, y_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Vector3, z_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Vector3, magnitude_),
+  };
+  Vector3_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      Vector3_descriptor_,
+      Vector3::default_instance_,
+      Vector3_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Vector3, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Vector3, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(Vector3));
+  myoDeviceListener_descriptor_ = file->message_type(1);
   static const int myoDeviceListener_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, timestamp_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, pose_),
@@ -38,7 +59,7 @@ void protobuf_AssignDesc_MyoDeviceListener_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, acceleromaterdata_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, gyroscopedata_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, rssi_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, emgdata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(myoDeviceListener, sensordata_),
   };
   myoDeviceListener_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -64,12 +85,16 @@ inline void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    Vector3_descriptor_, &Vector3::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     myoDeviceListener_descriptor_, &myoDeviceListener::default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_MyoDeviceListener_2eproto() {
+  delete Vector3::default_instance_;
+  delete Vector3_reflection_;
   delete myoDeviceListener::default_instance_;
   delete myoDeviceListener_reflection_;
 }
@@ -80,23 +105,22 @@ void protobuf_AddDesc_MyoDeviceListener_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::StrokeGeniusProto::protobuf_AddDesc_Vector3_2eproto();
-  ::StrokeGeniusProto::protobuf_AddDesc_Quaternion_2eproto();
-  ::StrokeGeniusProto::protobuf_AddDesc_EMGData_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\027MyoDeviceListener.proto\022\021StrokeGeniusP"
-    "roto\032\rVector3.proto\032\020Quaternion.proto\032\rE"
-    "MGData.proto\"\252\002\n\021myoDeviceListener\022\021\n\tti"
-    "meStamp\030\001 \002(\005\022(\n\004pose\030\002 \002(\0132\032.StrokeGeni"
-    "usProto.Vector3\0223\n\017orientationData\030\003 \002(\013"
-    "2\032.StrokeGeniusProto.Vector3\0225\n\021accelero"
-    "materData\030\004 \002(\0132\032.StrokeGeniusProto.Vect"
-    "or3\0221\n\rgyroscopeData\030\005 \002(\0132\032.StrokeGeniu"
-    "sProto.Vector3\022\014\n\004rssi\030\006 \002(\005\022+\n\007emgData\030"
-    "\007 \002(\0132\032.StrokeGeniusProto.EMGData", 393);
+    "roto\"=\n\007Vector3\022\t\n\001x\030\001 \002(\002\022\t\n\001y\030\002 \002(\002\022\t\n"
+    "\001z\030\003 \002(\002\022\021\n\tmagnitude\030\004 \002(\002\"\225\002\n\021myoDevic"
+    "eListener\022\021\n\ttimeStamp\030\001 \002(\005\022(\n\004pose\030\002 \002"
+    "(\0132\032.StrokeGeniusProto.Vector3\0223\n\017orient"
+    "ationData\030\003 \002(\0132\032.StrokeGeniusProto.Vect"
+    "or3\0225\n\021acceleromaterData\030\004 \002(\0132\032.StrokeG"
+    "eniusProto.Vector3\0221\n\rgyroscopeData\030\005 \002("
+    "\0132\032.StrokeGeniusProto.Vector3\022\014\n\004rssi\030\006 "
+    "\002(\005\022\026\n\nsensorData\030\007 \003(\005B\002\020\001", 387);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "MyoDeviceListener.proto", &protobuf_RegisterTypes);
+  Vector3::default_instance_ = new Vector3();
   myoDeviceListener::default_instance_ = new myoDeviceListener();
+  Vector3::default_instance_->InitAsDefaultInstance();
   myoDeviceListener::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_MyoDeviceListener_2eproto);
 }
@@ -112,13 +136,333 @@ struct StaticDescriptorInitializer_MyoDeviceListener_2eproto {
 // ===================================================================
 
 #ifndef _MSC_VER
+const int Vector3::kXFieldNumber;
+const int Vector3::kYFieldNumber;
+const int Vector3::kZFieldNumber;
+const int Vector3::kMagnitudeFieldNumber;
+#endif  // !_MSC_VER
+
+Vector3::Vector3()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void Vector3::InitAsDefaultInstance() {
+}
+
+Vector3::Vector3(const Vector3& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void Vector3::SharedCtor() {
+  _cached_size_ = 0;
+  x_ = 0;
+  y_ = 0;
+  z_ = 0;
+  magnitude_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+Vector3::~Vector3() {
+  SharedDtor();
+}
+
+void Vector3::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void Vector3::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Vector3::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Vector3_descriptor_;
+}
+
+const Vector3& Vector3::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_MyoDeviceListener_2eproto();  return *default_instance_;
+}
+
+Vector3* Vector3::default_instance_ = NULL;
+
+Vector3* Vector3::New() const {
+  return new Vector3;
+}
+
+void Vector3::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    x_ = 0;
+    y_ = 0;
+    z_ = 0;
+    magnitude_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool Vector3::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required float x = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &x_)));
+          set_has_x();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(21)) goto parse_y;
+        break;
+      }
+      
+      // required float y = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_y:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &y_)));
+          set_has_y();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(29)) goto parse_z;
+        break;
+      }
+      
+      // required float z = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_z:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &z_)));
+          set_has_z();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(37)) goto parse_magnitude;
+        break;
+      }
+      
+      // required float magnitude = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+         parse_magnitude:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &magnitude_)));
+          set_has_magnitude();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+      
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void Vector3::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required float x = 1;
+  if (has_x()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->x(), output);
+  }
+  
+  // required float y = 2;
+  if (has_y()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->y(), output);
+  }
+  
+  // required float z = 3;
+  if (has_z()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->z(), output);
+  }
+  
+  // required float magnitude = 4;
+  if (has_magnitude()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->magnitude(), output);
+  }
+  
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* Vector3::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required float x = 1;
+  if (has_x()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->x(), target);
+  }
+  
+  // required float y = 2;
+  if (has_y()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->y(), target);
+  }
+  
+  // required float z = 3;
+  if (has_z()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->z(), target);
+  }
+  
+  // required float magnitude = 4;
+  if (has_magnitude()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->magnitude(), target);
+  }
+  
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int Vector3::ByteSize() const {
+  int total_size = 0;
+  
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required float x = 1;
+    if (has_x()) {
+      total_size += 1 + 4;
+    }
+    
+    // required float y = 2;
+    if (has_y()) {
+      total_size += 1 + 4;
+    }
+    
+    // required float z = 3;
+    if (has_z()) {
+      total_size += 1 + 4;
+    }
+    
+    // required float magnitude = 4;
+    if (has_magnitude()) {
+      total_size += 1 + 4;
+    }
+    
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Vector3::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const Vector3* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Vector3*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void Vector3::MergeFrom(const Vector3& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_x()) {
+      set_x(from.x());
+    }
+    if (from.has_y()) {
+      set_y(from.y());
+    }
+    if (from.has_z()) {
+      set_z(from.z());
+    }
+    if (from.has_magnitude()) {
+      set_magnitude(from.magnitude());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void Vector3::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Vector3::CopyFrom(const Vector3& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Vector3::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+  
+  return true;
+}
+
+void Vector3::Swap(Vector3* other) {
+  if (other != this) {
+    std::swap(x_, other->x_);
+    std::swap(y_, other->y_);
+    std::swap(z_, other->z_);
+    std::swap(magnitude_, other->magnitude_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata Vector3::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Vector3_descriptor_;
+  metadata.reflection = Vector3_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
 const int myoDeviceListener::kTimeStampFieldNumber;
 const int myoDeviceListener::kPoseFieldNumber;
 const int myoDeviceListener::kOrientationDataFieldNumber;
 const int myoDeviceListener::kAcceleromaterDataFieldNumber;
 const int myoDeviceListener::kGyroscopeDataFieldNumber;
 const int myoDeviceListener::kRssiFieldNumber;
-const int myoDeviceListener::kEmgDataFieldNumber;
+const int myoDeviceListener::kSensorDataFieldNumber;
 #endif  // !_MSC_VER
 
 myoDeviceListener::myoDeviceListener()
@@ -131,7 +475,6 @@ void myoDeviceListener::InitAsDefaultInstance() {
   orientationdata_ = const_cast< ::StrokeGeniusProto::Vector3*>(&::StrokeGeniusProto::Vector3::default_instance());
   acceleromaterdata_ = const_cast< ::StrokeGeniusProto::Vector3*>(&::StrokeGeniusProto::Vector3::default_instance());
   gyroscopedata_ = const_cast< ::StrokeGeniusProto::Vector3*>(&::StrokeGeniusProto::Vector3::default_instance());
-  emgdata_ = const_cast< ::StrokeGeniusProto::EMGData*>(&::StrokeGeniusProto::EMGData::default_instance());
 }
 
 myoDeviceListener::myoDeviceListener(const myoDeviceListener& from)
@@ -148,7 +491,6 @@ void myoDeviceListener::SharedCtor() {
   acceleromaterdata_ = NULL;
   gyroscopedata_ = NULL;
   rssi_ = 0;
-  emgdata_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -162,7 +504,6 @@ void myoDeviceListener::SharedDtor() {
     delete orientationdata_;
     delete acceleromaterdata_;
     delete gyroscopedata_;
-    delete emgdata_;
   }
 }
 
@@ -202,10 +543,8 @@ void myoDeviceListener::Clear() {
       if (gyroscopedata_ != NULL) gyroscopedata_->::StrokeGeniusProto::Vector3::Clear();
     }
     rssi_ = 0;
-    if (has_emgdata()) {
-      if (emgdata_ != NULL) emgdata_->::StrokeGeniusProto::EMGData::Clear();
-    }
   }
+  sensordata_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -299,17 +638,24 @@ bool myoDeviceListener::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(58)) goto parse_emgData;
+        if (input->ExpectTag(58)) goto parse_sensorData;
         break;
       }
       
-      // required .StrokeGeniusProto.EMGData emgData = 7;
+      // repeated int32 sensorData = 7 [packed = true];
       case 7: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_emgData:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_emgdata()));
+         parse_sensorData:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, this->mutable_sensordata())));
+        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
+                   == ::google::protobuf::internal::WireFormatLite::
+                      WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 1, 58, input, this->mutable_sensordata())));
         } else {
           goto handle_uninterpreted;
         }
@@ -369,10 +715,14 @@ void myoDeviceListener::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->rssi(), output);
   }
   
-  // required .StrokeGeniusProto.EMGData emgData = 7;
-  if (has_emgdata()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, this->emgdata(), output);
+  // repeated int32 sensorData = 7 [packed = true];
+  if (this->sensordata_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(7, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_sensordata_cached_byte_size_);
+  }
+  for (int i = 0; i < this->sensordata_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
+      this->sensordata(i), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -421,11 +771,18 @@ void myoDeviceListener::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->rssi(), target);
   }
   
-  // required .StrokeGeniusProto.EMGData emgData = 7;
-  if (has_emgdata()) {
+  // repeated int32 sensorData = 7 [packed = true];
+  if (this->sensordata_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      7,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+      _sensordata_cached_byte_size_, target);
+  }
+  for (int i = 0; i < this->sensordata_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        7, this->emgdata(), target);
+      WriteInt32NoTagToArray(this->sensordata(i), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -481,14 +838,22 @@ int myoDeviceListener::ByteSize() const {
           this->rssi());
     }
     
-    // required .StrokeGeniusProto.EMGData emgData = 7;
-    if (has_emgdata()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->emgdata());
-    }
-    
   }
+  // repeated int32 sensorData = 7 [packed = true];
+  {
+    int data_size = 0;
+    for (int i = 0; i < this->sensordata_size(); i++) {
+      data_size += ::google::protobuf::internal::WireFormatLite::
+        Int32Size(this->sensordata(i));
+    }
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
+    }
+    _sensordata_cached_byte_size_ = data_size;
+    total_size += data_size;
+  }
+  
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -514,6 +879,7 @@ void myoDeviceListener::MergeFrom(const ::google::protobuf::Message& from) {
 
 void myoDeviceListener::MergeFrom(const myoDeviceListener& from) {
   GOOGLE_CHECK_NE(&from, this);
+  sensordata_.MergeFrom(from.sensordata_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_timestamp()) {
       set_timestamp(from.timestamp());
@@ -533,9 +899,6 @@ void myoDeviceListener::MergeFrom(const myoDeviceListener& from) {
     if (from.has_rssi()) {
       set_rssi(from.rssi());
     }
-    if (from.has_emgdata()) {
-      mutable_emgdata()->::StrokeGeniusProto::EMGData::MergeFrom(from.emgdata());
-    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -553,7 +916,7 @@ void myoDeviceListener::CopyFrom(const myoDeviceListener& from) {
 }
 
 bool myoDeviceListener::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000007f) != 0x0000007f) return false;
+  if ((_has_bits_[0] & 0x0000003f) != 0x0000003f) return false;
   
   if (has_pose()) {
     if (!this->pose().IsInitialized()) return false;
@@ -578,7 +941,7 @@ void myoDeviceListener::Swap(myoDeviceListener* other) {
     std::swap(acceleromaterdata_, other->acceleromaterdata_);
     std::swap(gyroscopedata_, other->gyroscopedata_);
     std::swap(rssi_, other->rssi_);
-    std::swap(emgdata_, other->emgdata_);
+    sensordata_.Swap(&other->sensordata_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
