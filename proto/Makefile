@@ -15,4 +15,4 @@ all:
 	$(CC) -I=$(SRC_DIR) --cpp_out=$(DST_DIR)/StrokeGeniusProto $(SRC_DIR)/MyoDeviceListener.proto
 		
 clean:
-	rm $(SRC_DIR)/StrokeGeniusProto/*
+	rm $(DST_DIR)/StrokeGeniusProto/*
